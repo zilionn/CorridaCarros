@@ -55,7 +55,6 @@ public class Principal {
     }
 
     public static void carCrossedFinishLine(CarController car) {
-        // Atualize o vencedor e o perdedor
         if (winnerTextField.getText().equals("Vencedor")) {
             winnerTextField.setText(car.getCarName());
         } else {
@@ -64,13 +63,11 @@ public class Principal {
     }
 
     private static void startRace() {
-        // Inicie as threads dos carros
         CarController car1 = new CarController("Carro 1", 800, 10);
         CarController car2 = new CarController("Carro 2", 800, 10);
         car1.start();
         car2.start();
 
-        // Desabilite o botão de corrida
         frame.getComponent(4).setEnabled(false);
     }
     
