@@ -27,7 +27,6 @@ public class CarController extends Thread {
                 e.printStackTrace();
             }
         }
-        // Carro chegou à linha de chegada
         Principal.carCrossedFinishLine(this);
     }
 
@@ -40,7 +39,6 @@ public class CarController extends Thread {
     }
 
     private void accelerate() {
-        // Gere uma velocidade aleatória entre 0 e a velocidade máxima
         currentSpeed = (int) (Math.random() * (maxSpeed + 1));
     }
 }
